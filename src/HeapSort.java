@@ -29,7 +29,7 @@ public class HeapSort {
 			}
 		}
 	}
-
+	
 	public void makeHeap(int arr[], int end) {
 		int size = end + 1;
 		boolean swap = false;
