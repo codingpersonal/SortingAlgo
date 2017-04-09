@@ -1,3 +1,14 @@
+/*heap is something with elements with min or max
+ * min heap is where parent is smaller than both child
+ * max heap is where parent is more than both children.
+ * 
+ * for a node, its children will be 2x+1 and 2x+2
+ * and for a child parent will be x-1/2
+ * 
+ * also, insertion can be done only at the last leaf node
+ * deletion can be done from the root only.
+ * 
+ * nodes need to be swapped within the heap to make the remaining nodes as a heap.*/
 
 public class HeapSort_Improved {
 		int max_size;
@@ -16,12 +27,14 @@ public class HeapSort_Improved {
 				return;
 			}
 			
+			//insert an element in the end.
 			arr[curr_size] = item;
 			curr_size++;
 			
 			int i = curr_size - 1;
 			int temp;
 			while(i > 0) {
+				//check the element with its parent, if it is small, swap it.
 				int parent = (i - 1) /2;
 				if(arr[i] < arr[parent]) {
 					temp = arr[i];
@@ -43,6 +56,7 @@ public class HeapSort_Improved {
 				item = arr[0];
 			}
 			
+			//after removing the root, just swap the last element with the root.
 			arr[0] = arr[curr_size - 1];
 			curr_size--;
 			
@@ -68,6 +82,7 @@ public class HeapSort_Improved {
 				
 				//if both children are present.
 				else if(left != -1 && right != -1) {
+					//swap the parent with smallest of its children.
 					if(left <= right) {
 						temp = arr[i];
 						arr[i] = arr[2* i + 1];
@@ -82,7 +97,7 @@ public class HeapSort_Improved {
 					}
 				}
 				
-				//if only one child is present
+				//if only one child is present, left
 				else if(left != -1) {
 					if(left < arr[i]) {
 						temp = arr[i];
@@ -92,6 +107,7 @@ public class HeapSort_Improved {
 					i = 2 * i + 1;
 				}
 				
+				//if only right child is present.
 				else {
 					if(right < arr[i]) {
 						temp = arr[i];

@@ -1,3 +1,10 @@
+/* worse case time complexity is O(n log n)
+ * where O(n) is the time taken in merging
+ * and logn for the division of the lists.
+ * 
+ * also best case time complexity is still the same.
+ * No difference.
+ * */
 
 public class Merge {
 	public int[] merge_sorted_arr(int arr1[], int beg1, int end1, int arr2[], int beg2, int end2) {

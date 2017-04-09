@@ -1,4 +1,4 @@
-
+/*Worst case complexity is O(n^2) and best case will be when list is already sorted, then it will be O(n)*/
 public class InsertionSort {
 	public void insertionSort(int arr[]) {
 		for (int index = 1; index < arr.length; index++) {
