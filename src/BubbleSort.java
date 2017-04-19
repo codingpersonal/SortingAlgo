@@ -3,7 +3,7 @@
  * it is O(n^2)
  * 
  * Best case is when the list is sorted and you are trying to sort it still
- * 
+ * Complexity can be O(n) when doing this approach (check swaps)
  */
 
 import java.util.ArrayList;
