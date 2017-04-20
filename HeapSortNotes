@@ -1,0 +1,28 @@
+Heap Sort 
+
+Min heap - root is smaller than both children
+Max heal - root is larger than both parents
+
+If root is at r location in an array, 
+left child = 2r + 1
+right child = 2r + 2
+
+Adding an element in the heap: Min Heap
+Add an element in the end of the heap. Now the heap is disturbed.
+Check the added element with its parent. If parent is smaller, then break.
+If the parent is larger now, then swap it with parent.
+Keep on doing it until either the parent is smaller
+or root level is reached.
+
+Deleting an element from the heap: Min Heap
+Remove the root. Put it in some other array.
+Now next root should be the smallest element.
+So for now replace the last element in the array and make it as root.
+Now heapify again.
+Check roots children, if any1 is smaller, make it as root.
+Keep on doing it until you reach the last leaf level.
+
+
+Applications of heap:
+If at any point of time, you need to store the top K numbers
+You can do so using a Min Heap.
